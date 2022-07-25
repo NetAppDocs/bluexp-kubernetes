@@ -16,6 +16,17 @@ summary: Learn what's new in Kubernetes in Cloud Manager.
 Learn what's new in Kubernetes in Cloud Manager.
 
 //tag::whats-new[]
+== 31 July 2022
+
+* Cloud Manager now monitors Kubernetes clusters managed in Cloud Manager. If new persistent volumes are added, Cloud Manager automatically adds them to the list of available volumes. Additionally, backup is automatically enabled if automatic backup was configured on the cluster. 
+
+* When defining storage classes, you can now: 
+
+** Specify a file system type (fstype) for Block storage
+
+** Enable storage economy for block and file storage
+
+
 == 3 July 2022
 * If Astra Trident was deployed using the Trident operator, you can now upgrade to the latest version of Astra Trident using Cloud Manager. 
 +
@@ -29,6 +40,7 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage
 
 Cloud Manager now suports Amazon FSx for ONTAP as backend storage.  
 
+//end::whats-new[]
 == 4 May 2022
 
 === Drag and drop to add storage class
@@ -36,7 +48,6 @@ You can now drag your Kubernetes cluster and drop it onto the Cloud Volumes ONTA
 
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[Add storage class]
 
-//end::whats-new[]
 == 4 April 2022
 
 === Manage Kubernetes clusters using the Cloud Manager resource page
