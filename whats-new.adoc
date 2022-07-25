@@ -20,9 +20,12 @@ Learn what's new in Kubernetes in Cloud Manager.
 
 * Cloud Manager now monitors Kubernetes clusters managed in Cloud Manager. If new persistent volumes are added, Cloud Manager automatically adds them to the list of available volumes. Additionally, backup is automatically enabled if automatic backup was configured on the cluster. 
 
-* When defining storage classes, you can now: 
++
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html[View persistent volumes]
 
-** Specify a file system type (fstype) for Block storage
+* When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now: 
+
+** Specify a file system type (fstype) for block storage
 
 ** Enable storage economy for block and file storage
 
