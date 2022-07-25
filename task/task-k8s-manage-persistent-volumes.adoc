@@ -15,6 +15,8 @@ summary: After you add a managed-Kubernetes cluster to the Canvas, you can use C
 [.lead]
 After you add a managed Kubernetes cluster to the Canvas, you can use Cloud Manager to view persistent volumes. 
 
+NOTE: Cloud Manager monitors the Kubernetes cluster and updates the persistent volume table when new volumes are added. If automatic backup was configured on the cluster, backup is automatically enabled on the new persistent volumes.
+
 .Steps
 
 . Double-click the Kubernetes working environment on the Canvas or click *Enter Working Environment*.
@@ -26,4 +28,4 @@ A table of the configured persistent volumes displays.
 
 image:screenshot-k8s-volume-table.png[A screenshot of the persistent volumes table.]
 
-NOTE: Cloud Manager monitors the Kubernetes cluster and updates the persistent volume table when new volumes are added. If automatic backup was configured on the cluster, backup is automatically enabled on the new persistent volumes. 
+
