@@ -18,7 +18,7 @@ Learn what's new in Kubernetes in Cloud Manager.
 //tag::whats-new[]
 == 31 July 2022
 
-* Using a new `- watch` verb in the Storage Class YAML, Cloud Manager can now monitor Kubernetes clusters managed for changes made to the cluster backend. 
+* Using the new `- watch` verb in the Storage Class YAML, Cloud Manager can now monitor Kubernetes clusters for changes made to the cluster backend. 
 +
 ifdef::aws[]
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html[Requirements for Kubernetes clusters in AWS]
@@ -31,6 +31,7 @@ endif::azure[]
 ifdef::gcp[]
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html[Requirements for Kubernetes clusters in Google Cloud]
 endif::gcp[]
+
 +
 If new persistent volumes are added, Cloud Manager automatically adds them to the list of available volumes. Additionally, backup is automatically enabled if automatic backup was configured on the cluster.
 
