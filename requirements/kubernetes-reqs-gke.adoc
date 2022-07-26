@@ -214,6 +214,7 @@ rules:
           - persistentvolumes
           - pods
           - pods/exec
+          - watch
       verbs:
           - get
           - list
@@ -240,6 +241,7 @@ rules:
           - list
           - create
           - delete
+          - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
