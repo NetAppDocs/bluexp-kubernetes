@@ -154,12 +154,14 @@ rules:
           - namespaces
       verbs:
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
           - persistentvolumes
       verbs:
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
@@ -168,6 +170,7 @@ rules:
       verbs:
           - get
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
@@ -175,24 +178,27 @@ rules:
       verbs:
           - list
           - create
+          - watch
     - apiGroups:
           - storage.k8s.io
       resources:
           - storageclasses
       verbs:
-          - list
+          - list          
     - apiGroups:
           - trident.netapp.io
       resources:
           - tridentbackends
       verbs:
           - list
+          - watch
     - apiGroups:
           - trident.netapp.io
       resources:
           - tridentorchestrators
       verbs:
           - get
+          - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -231,6 +237,7 @@ rules:
       verbs:
           - get
           - list
+          - watch
           - create
           - delete
           - watch
@@ -242,6 +249,7 @@ rules:
           - get
           - create
           - list
+          - watch
           - delete
           - patch
     - apiGroups:
@@ -253,6 +261,7 @@ rules:
       verbs:
           - get
           - list
+          - watch
           - create
           - delete
           - watch
