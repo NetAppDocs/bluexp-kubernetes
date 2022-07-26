@@ -213,12 +213,12 @@ rules:
           - persistentvolumes
           - pods
           - pods/exec
-          - watch
       verbs:
           - get
           - list
           - create
           - delete
+          - watch
     - apiGroups:
           - storage.k8s.io
       resources:
