@@ -18,10 +18,21 @@ Learn what's new in Kubernetes in Cloud Manager.
 //tag::whats-new[]
 == 31 July 2022
 
-* Cloud Manager now monitors Kubernetes clusters managed in Cloud Manager. If new persistent volumes are added, Cloud Manager automatically adds them to the list of available volumes. Additionally, backup is automatically enabled if automatic backup was configured on the cluster. 
-
+* Using a new `- watch` verb in the Storage Class YAML, Cloud Manager can now monitor Kubernetes clusters managed for changes made to the cluster backend. 
 +
-link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-persistent-volumes.html[View persistent volumes]
+If new persistent volumes are added, Cloud Manager automatically adds them to the list of available volumes. Additionally, backup is automatically enabled if automatic backup was configured on the cluster.
+
+ifdef::aws[]
+** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html[Requirements for Kubernetes clusters in AWS]
+endif::aws[]
+
+ifdef::azure[]
+** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html[Requirements for Kubernetes clusters in Azure]
+endif::azure[]
+
+ifdef::gcp[]
+** link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html[Requirements for Kubernetes clusters in Google Cloud]
+endif::gcp[]
 
 * When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now: 
 
