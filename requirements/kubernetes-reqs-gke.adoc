@@ -92,7 +92,7 @@ Backup and restore::
 Backup and restore requires only basic authorization.
 
 Add storage classes::
-Expanded authorization is required to add storage classes using Cloud Manager.
+Expanded authorization is required to add storage classes using Cloud Manager and monitor the cluster for changes to the backend. 
 
 Install Astra trident::
 You need to provide full authorization for Cloud Manager to install Astra Trident.
@@ -140,12 +140,14 @@ rules:
           - namespaces
       verbs:
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
           - persistentvolumes
       verbs:
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
@@ -154,6 +156,7 @@ rules:
       verbs:
           - get
           - list
+          - watch
     - apiGroups:
           - ''
       resources:
@@ -161,24 +164,27 @@ rules:
       verbs:
           - list
           - create
+          - watch
     - apiGroups:
           - storage.k8s.io
       resources:
           - storageclasses
       verbs:
-          - list
+          - list          
     - apiGroups:
           - trident.netapp.io
       resources:
           - tridentbackends
       verbs:
           - list
+          - watch
     - apiGroups:
           - trident.netapp.io
       resources:
           - tridentorchestrators
       verbs:
           - get
+          - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -213,12 +219,14 @@ rules:
           - persistentvolumeclaims
           - persistentvolumes
           - pods
-          - pods/exec
+          - pods/exec          
       verbs:
           - get
           - list
+          - watch
           - create
           - delete
+          - watch
     - apiGroups:
           - storage.k8s.io
       resources:
@@ -227,6 +235,7 @@ rules:
           - get
           - create
           - list
+          - watch
           - delete
           - patch
     - apiGroups:
@@ -238,8 +247,10 @@ rules:
       verbs:
           - get
           - list
+          - watch
           - create
           - delete
+          - watch
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding

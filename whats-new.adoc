@@ -16,6 +16,29 @@ summary: Learn what's new in Kubernetes in Cloud Manager.
 Learn what's new in Kubernetes in Cloud Manager.
 
 //tag::whats-new[]
+== 31 July 2022
+
+* Using the new `- watch` verb in the storage class and backup and restore YAML configurations, Cloud Manager can now monitor Kubernetes clusters for changes made to the cluster backend and automatically enable backup for new persistent volumes if automatic backup was configured on the cluster.
++
+ifdef::aws[]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html[Requirements for Kubernetes clusters in AWS]
+endif::aws[]
++
+ifdef::azure[]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html[Requirements for Kubernetes clusters in Azure]
+endif::azure[]
++
+ifdef::gcp[]
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html[Requirements for Kubernetes clusters in Google Cloud]
+endif::gcp[]
+
+* When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now: 
+
+** Specify a file system type (fstype) for block storage
+
+** Enable storage economy for block and file storage
+
+
 == 3 July 2022
 * If Astra Trident was deployed using the Trident operator, you can now upgrade to the latest version of Astra Trident using Cloud Manager. 
 +
@@ -29,6 +52,7 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage
 
 Cloud Manager now suports Amazon FSx for ONTAP as backend storage.  
 
+//end::whats-new[]
 == 4 May 2022
 
 === Drag and drop to add storage class
@@ -36,7 +60,6 @@ You can now drag your Kubernetes cluster and drop it onto the Cloud Volumes ONTA
 
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[Add storage class]
 
-//end::whats-new[]
 == 4 April 2022
 
 === Manage Kubernetes clusters using the Cloud Manager resource page
