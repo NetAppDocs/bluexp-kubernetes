@@ -20,17 +20,17 @@ Learn what's new in Kubernetes in Cloud Manager.
 
 * Using the new `- watch` verb in the storage class and backup and restore YAML configurations, Cloud Manager can now monitor Kubernetes clusters for changes made to the cluster backend and automatically enable backup for new persistent volumes if automatic backup was configured on the cluster.
 +
-ifdef::aws[]
+// ifdef::aws[]
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html[Requirements for Kubernetes clusters in AWS]
-endif::aws[]
+// endif::aws[]
 +
-ifdef::azure[]
+// ifdef::azure[]
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html[Requirements for Kubernetes clusters in Azure]
-endif::azure[]
+// endif::azure[]
 +
-ifdef::gcp[]
+// ifdef::gcp[]
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html[Requirements for Kubernetes clusters in Google Cloud]
-endif::gcp[]
+// endif::gcp[]
 
 * When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now: 
 
