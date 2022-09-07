@@ -8,7 +8,7 @@ summary: After you add a managed-Kubernetes cluster to the Canvas, you can use C
 = Manage storage classes
 :hardbreaks:
 :nofooter:
-:icons: font
+:icons: fontgit 
 :linkattrs:
 :imagesdir: ../media/
 
