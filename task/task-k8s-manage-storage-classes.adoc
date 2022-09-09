@@ -35,7 +35,7 @@ image:screenshot-k8s-storage-economy.png[A screenshot showing the fstype option 
 +
 image:screenshot-k8s-storage-fstype.png[A screenshot showing the storage economy option when configuring a block or files K8s storage class.]
 
-. Select options for volume expansion, volume bining, and default storage class. Click *Next*.
+. Select options for volume expansion, volume binding, and default storage class. Click *Next*.
 
 . Select a working environment to connect to the cluster. Click *Add*.
 +
