@@ -25,11 +25,17 @@ NOTE: If no storage class is defined, the cluster will show there is an action r
 
 . Provide a name for the storage class. 
 
-. Select *Filesystem* or *Block* storage. For *Block* storage, select a File System Type (fstype). 
-+
-image:screenshot-k8s-storage-fstypes.png[A screenshot showing the fstype option for block storage when configuring a K8s storage class.]
+. Select *Filesystem* or *Block* storage. 
 
-. Select options for volume expansion, volume binding, and default storage class. Click *Next*.
+.. For *Block* storage, select a File System Type (fstype)
++
+image:screenshot-k8s-storage-economy.png[A screenshot showing the fstype option for block storage when configuring a K8s storage class.]
+
+.. For *Block* or *Filesystem* storage, you can select to enable storage economy.
++
+image:screenshot-k8s-storage-fstype.png[A screenshot showing the storage economy option when configuring a block or files K8s storage class.]
+
+. Select options for volume expansion, volume bining, and default storage class. Click *Next*.
 
 . Select a working environment to connect to the cluster. Click *Add*.
 +
