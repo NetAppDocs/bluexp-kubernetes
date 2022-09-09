@@ -16,6 +16,13 @@ summary: Learn what's new in Kubernetes in Cloud Manager.
 Learn what's new in Kubernetes in Cloud Manager.
 
 //tag::whats-new[]
+== 18 September 2022
+You can now import self-managed OpenShift clusters into Cloud Manager. 
+
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-openshift.html[Requirements for Kubernetes clusters in OpenShift]
+
+link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-add-openshift.html[Add and OpenShift cluster to Cloud Manager]
+
 == 31 July 2022
 
 * Using the new `- watch` verb in the storage class and backup and restore YAML configurations, Cloud Manager can now monitor Kubernetes clusters for changes made to the cluster backend and automatically enable backup for new persistent volumes if automatic backup was configured on the cluster.
@@ -44,11 +51,11 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage
 +
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[Add storage class]
 
+//end::whats-new[]
 == 6 June 2022
 
 Cloud Manager now suports Amazon FSx for ONTAP as backend storage.  
 
-//end::whats-new[]
 == 4 May 2022
 
 === Drag and drop to add storage class

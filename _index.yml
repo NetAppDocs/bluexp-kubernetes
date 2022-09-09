@@ -20,6 +20,8 @@ indexpage:
         - title: Kubernetes clusters on Google Cloud
           # flavor: gcp
           url: /requirements/kubernetes-reqs-gke.html
+        - title: Kubernetes clusters on OpenShift
+          url: /requirements/kubernetes-reqs-openshift.html
     - title: Add Kubernetes clusters
       links:
         - title: Add clusters on AWS
@@ -31,6 +33,8 @@ indexpage:
         - title: Add clusters on Google Cloud
           # flavor: gcp
           url: /task/task-kubernetes-discover-gke.html
+        - title: Add clusters on OpenShift
+          url: /task/task-kubernetes-discover-openshift.html
     - title: Manage Kubernetes clusters
       links:
        - title: Install Astra Trident
