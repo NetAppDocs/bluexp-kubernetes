@@ -371,3 +371,6 @@ mv kubeconfig-sa.txt YOUR_CLUSTER_NAME_kubeconfig
 +
 [source,kubectl]
 kubectl apply -f <file-name>
+
+.Result
+You can now add an OpenShift cluster to Cloud Manager.

@@ -32,7 +32,7 @@ image:screenshot-k8s-aks-import-1.png[A screenshot of the import Kubernetes clus
 
 . Select the Kubernetes cluster and select *Next*.
 
-. Upload your Certificate Authority (for example, ca.crt), Client Key (for example, tls.key), and Client Certification (for example, tls.crt) files. Select 
+. Upload your Certificate Authority (for example, ca.crt), Client Key (for example, tls.key), and Client Certification (for example, tls.crt) files. 
 +
 image:screenshot-oc-certs.png[A screenshot of the cluster certificate upload screen.]
 
