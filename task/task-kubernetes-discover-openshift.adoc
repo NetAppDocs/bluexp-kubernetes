@@ -26,11 +26,9 @@ You can import a self-managed Kubernetes cluster using a Kubernetes configuratio
 
 . Select *Import Cluster* then *Next*.
 
-. Upload the `kubeconfig-sa` file you created in link:../requirements/kubernetes-reqs-openshift.html/#create-a-kubeconfig-file[create a kubeconfig file].
+. Upload the `kubeconfig-sa` file you created in link:../requirements/kubernetes-reqs-openshift.html/#create-a-kubeconfig-file[create a kubeconfig file]. Select the Kubernetes cluster and select *Next*.
 +
 image:screenshot-k8s-aks-import-1.png[A screenshot of the import Kubernetes cluster page with configuration file and available clusters table.]
-
-. Select the Kubernetes cluster and select *Next*.
 
 . Upload the public Certificate Authority (for example, ca.crt), Client Key (for example, tls.key), and Client Certification (for example, tls.crt) files for the cluster.
 +
