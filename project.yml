@@ -43,6 +43,8 @@ sidebar:
         - title: Kubernetes clusters on Google Cloud
           flavor: gcp
           url: /requirements/kubernetes-reqs-gke.html
+        - title: Kubernetes clusters on OpenShift
+          url: /requirements/kubernetes-reqs-openshift.html
     - title: Add Kubernetes clusters
       entries:
         - title: Add clusters on AWS
@@ -54,6 +56,8 @@ sidebar:
         - title: Add clusters on Google Cloud
           flavor: gcp
           url: /task/task-kubernetes-discover-gke.html
+        - title: Add clusters on OpenShift
+          url: /task/task-kubernetes-discover-openshift.html
     - title: Manage Kubernetes clusters
       url: /concept-manage-k8s.html
       entries:

@@ -1,0 +1,45 @@
+---
+sidebar: sidebar
+permalink: /task/task-kubernetes-discover-openshift.html
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, openshift, kubernetes support, import kubernetes cluster, import 
+summary: Import a self-managed OpenShift cluster to Cloud Manager so that you can start backing up persistent volumes to your Cloud provider.
+---
+
+= Add an OpenShift cluster to Cloud Manager
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+Import a self-managed OpenShift cluster to Cloud Manager so you can start backing up persistent volumes to your Cloud provider.
+
+== Import a Cluster
+You can import a self-managed Kubernetes cluster using a Kubernetes configuration file.
+
+.Before you begin
+Before adding an OpenShift cluster, you need:
+
+* The `kubeconfig-sa`file you created in link:../requirements/kubernetes-reqs-openshift.html/#create-a-kubeconfig-file[create a kubeconfig file].
+* The public Certificate Authority (for example, ca.crt), Client Key (for example, tls.key), and Client Certification (for example, tls.crt) files for the cluster.
+
+.Steps
+
+. On the *Canvas*, select *Add Working Environment*.
+
+. Select your Cloud provider and select *Kubernetes Cluster* then  *Next*.
+
+. Select *Import Cluster* then *Next*.
+
+. Upload the `kubeconfig-sa` file you created in link:../requirements/kubernetes-reqs-openshift.html/#create-a-kubeconfig-file[create a kubeconfig file]. Select the Kubernetes cluster and select *Next*.
++
+image:screenshot-k8s-aks-import-1.png[A screenshot of the import Kubernetes cluster page with configuration file and available clusters table.]
+
+. Upload the cluster certificates.
++
+image:screenshot-oc-certs.png[A screenshot of the cluster certificate upload screen.]
+
+.Result
+
+Cloud Manager adds the Kubernetes cluster to the Canvas.

@@ -1,0 +1,363 @@
+---
+sidebar: sidebar
+permalink: /requirements/kubernetes-reqs-openshift.html
+keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, openshift, oc, kubernetes support
+summary: You can add and manage self-managed OpenShift Kubernetes clusters using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+---
+
+= Requirements for Kubernetes clusters in OpenShift
+:hardbreaks:
+:nofooter:
+:icons: font
+:linkattrs:
+:imagesdir: ../media/
+
+[.lead]
+You can add and manage self-managed OpenShift Kubernetes clusters using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+
+== Requirements
+
+Astra Trident::
+One of the four most recent versions of Astra Trident is required. You can install Astra Trident directly from Cloud Manager. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
+
+To upgrade Astra Trident, link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html[upgrade with the operator^].
+
+Cloud Volumes ONTAP::
+Cloud Volumes ONTAP must be set up as backend storage for the cluster. https://docs.netapp.com/us-en/trident/trident-use/backends.html[Go to the Astra Trident docs for configuration steps^].
+
+Cloud Manager Connector::
+A Cloud Manager Connector is required to import and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions for your Cloud provider:
+
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html#prepare-a-connector[AWS Connector]
+
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html#prepare-a-connector[Azure Connector]
+
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html#prepare-a-connector[Google Cloud Connector]
+
+Network connectivity::
+Network connectivity is required between the Kubernetes cluster and the Connector and between the Kubernetes cluster and Cloud Volumes ONTAP. 
+
+Kubernetes configuration file (kubeconfig) with RBAC authorization::
+To import OpenShift clusters, you need a kubeconfig file with the RBAC authorization required to enable different functionality. <<Create a kubeconfig file>>.
+
+* Backup and restore: Backup and restore requires only basic authorization.
+
+* Add storage classes: Expanded authorization is required to add storage classes using Cloud Manager and monitor the cluster for changes to the backend.
+
+* Install Astra Trident: You need to provide full authorization for Cloud Manager to install Astra Trident.
++
+NOTE: When installing Astra Trident, Cloud Manager installs the Astra Trident backend and Kubernetes secret that contains the credentials Astra Trident needs to communicate with the storage cluster.
+
+== Create a kubeconfig file
+Using the OpenShift CLI, create a kubeconfig file to import to Cloud Manager.
+
+.Steps
+. Log in to the OpenShift CLI using `oc login` on a public URL with an administrative user. 
+. Create a service account as follows:
+.. Create a service account file called `oc-service-account.yaml`.
++
+Adjust the name and namespace as needed. If changes are made here, you should apply the same changes in the following steps.
++
+[source, cli]
+----
+oc-service-account.yaml
+----
++
+[source,cli]
+----
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: oc-service-account
+  namespace: default
+----
+
+.. Apply the service account:
++
+[source, cli]
+----
+kubectl apply -f oc-service-account.yaml
+----
+
+. Create a custom role binding based on your authorization requirements. 
+
+.. Create a `ClusterRoleBinding` file called `oc-clusterrolebinding.yaml`.
++
+[source,cli]
+oc-clusterrolebinding.yaml
+.. Configure RBAC authorization as needed for your cluster. 
++
+[role="tabbed-block"]
+====
+
+.Backup/restore
+--
+
+Add basic authorization to enable backup and restore for Kubernetes clusters.
+
+[source,yaml]
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+    name: cloudmanager-access-clusterrole
+rules:
+    - apiGroups:
+          - ''
+      resources:
+          - namespaces
+      verbs:
+          - list
+          - watch
+    - apiGroups:
+          - ''
+      resources:
+          - persistentvolumes
+      verbs:
+          - list
+          - watch
+    - apiGroups:
+          - ''
+      resources:
+          - pods
+          - pods/exec
+      verbs:
+          - get
+          - list
+          - watch
+    - apiGroups:
+          - ''
+      resources:
+          - persistentvolumeclaims
+      verbs:
+          - list
+          - create
+          - watch
+    - apiGroups:
+          - storage.k8s.io
+      resources:
+          - storageclasses
+      verbs:
+          - list
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentbackends
+      verbs:
+          - list
+          - watch
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentorchestrators
+      verbs:
+          - get
+          - watch          
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: k8s-access-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cloudmanager-access-clusterrole
+subjects:
+    - kind: ServiceAccount
+      name: oc-service-account
+      namespace: default
+--
+
+.Storage classes
+--
+
+Add expanded authorization to add storage classes using Cloud Manager.
+
+[source,yaml]
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+    name: cloudmanager-access-clusterrole
+rules:
+    - apiGroups:
+          - ''
+      resources:
+          - secrets
+          - namespaces
+          - persistentvolumeclaims
+          - persistentvolumes
+          - pods
+          - pods/exec
+      verbs:
+          - get
+          - list
+          - watch
+          - create
+          - delete
+          - watch
+    - apiGroups:
+          - storage.k8s.io
+      resources:
+          - storageclasses
+      verbs:
+          - get
+          - create
+          - list
+          - watch
+          - delete
+          - patch
+    - apiGroups:
+          - trident.netapp.io
+      resources:
+          - tridentbackends
+          - tridentorchestrators
+          - tridentbackendconfigs
+      verbs:
+          - get
+          - list
+          - watch
+          - create
+          - delete
+          - watch                    
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+    name: k8s-access-binding
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cloudmanager-access-clusterrole
+subjects:
+    - kind: ServiceAccount
+      name: oc-service-account
+      namespace: default
+
+--
+
+.Install Trident
+--
+
+Grant full admin authorization and enable Cloud Manager to install Astra Trident.
+
+[source,cli]
+
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: cloudmanager-access-clusterrole
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: oc-service-account
+  namespace: default
+
+--
+====
+.. Apply the cluster role binding:
++
+[source,cli]
+----
+kubectl apply -f oc-clusterrolebinding.yaml
+----
+
+. List the service account secrets, replacing `<context>` with the correct context for your installation:
++
+[source,cli]
+----
+kubectl get serviceaccount oc-service-account --context <context> --namespace default -o json
+----
++
+The end of the output should look similar to the following:
++
+[source,cli]
+----
+"secrets": [
+{ "name": "oc-service-account-dockercfg-vhz87"},
+{ "name": "oc-service-account-token-r59kr"}
+]
+----
++
+The indices for each element in the `secrets` array begin with 0. In the above example, the index for `oc-service-account-dockercfg-vhz87` would be 0 and the index for `oc-service-account-token-r59kr` would be 1. In your output, make note of the index for the service account name that has the word "token" in it.
+
+. Generate the kubeconfig as follows:
+.. Create a `create-kubeconfig.sh` file. Replace `TOKEN_INDEX` in the beginning of the following script with the correct value.
++
+[source, cli]
+----
+create-kubeconfig.sh
+----
++
+[source,sh]
+----
+# Update these to match your environment.
+# Replace TOKEN_INDEX with the correct value
+# from the output in the previous step. If you
+# didn't change anything else above, don't change
+# anything else here.
+
+SERVICE_ACCOUNT_NAME=oc-service-account
+NAMESPACE=default
+NEW_CONTEXT=oc
+KUBECONFIG_FILE='kubeconfig-sa'
+
+CONTEXT=$(kubectl config current-context)
+
+SECRET_NAME=$(kubectl get serviceaccount ${SERVICE_ACCOUNT_NAME} \
+  --context ${CONTEXT} \
+  --namespace ${NAMESPACE} \
+  -o jsonpath='{.secrets[TOKEN_INDEX].name}')
+TOKEN_DATA=$(kubectl get secret ${SECRET_NAME} \
+  --context ${CONTEXT} \
+  --namespace ${NAMESPACE} \
+  -o jsonpath='{.data.token}')
+
+TOKEN=$(echo ${TOKEN_DATA} | base64 -d)
+
+# Create dedicated kubeconfig
+# Create a full copy
+kubectl config view --raw > ${KUBECONFIG_FILE}.full.tmp
+
+# Switch working context to correct context
+kubectl --kubeconfig ${KUBECONFIG_FILE}.full.tmp config use-context ${CONTEXT}
+
+# Minify
+kubectl --kubeconfig ${KUBECONFIG_FILE}.full.tmp \
+  config view --flatten --minify > ${KUBECONFIG_FILE}.tmp
+
+# Rename context
+kubectl config --kubeconfig ${KUBECONFIG_FILE}.tmp \
+  rename-context ${CONTEXT} ${NEW_CONTEXT}
+
+# Create token user
+kubectl config --kubeconfig ${KUBECONFIG_FILE}.tmp \
+  set-credentials ${CONTEXT}-${NAMESPACE}-token-user \
+  --token ${TOKEN}
+
+# Set context to use token user
+kubectl config --kubeconfig ${KUBECONFIG_FILE}.tmp \
+  set-context ${NEW_CONTEXT} --user ${CONTEXT}-${NAMESPACE}-token-user
+
+# Set context to correct namespace
+kubectl config --kubeconfig ${KUBECONFIG_FILE}.tmp \
+  set-context ${NEW_CONTEXT} --namespace ${NAMESPACE}
+
+# Flatten/minify kubeconfig
+kubectl config --kubeconfig ${KUBECONFIG_FILE}.tmp \
+  view --flatten --minify > ${KUBECONFIG_FILE}
+
+# Remove tmp
+rm ${KUBECONFIG_FILE}.full.tmp
+rm ${KUBECONFIG_FILE}.tmp
+----
+.. Source the commands to apply them to your Kubernetes cluster.
++
+[source,cli]
+----
+source create-kubeconfig.sh
+----
+
+.Result
+You will use the resulting `kubeconfig-sa` file to add an OpenShift cluster to Cloud Manager. 
