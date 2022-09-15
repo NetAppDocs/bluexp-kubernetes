@@ -20,9 +20,7 @@ NOTE: This topic uses _Kubernetes cluster_ where configuration is the same for A
 == Requirements
 
 Astra Trident::
-One of the four most recent versions of Astra Trident is required. You can install Astra Trident directly from Cloud Manager. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
-
-To upgrade Astra Trident, link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/upgrade-operator.html[upgrade with the operator^].
+One of the four most recent versions of Astra Trident is required. You can install or upgrade Astra Trident directly from Cloud Manager. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
 
 Cloud Volumes ONTAP::
 Cloud Volumes ONTAP must be set up as backend storage for the cluster. https://docs.netapp.com/us-en/trident/trident-use/backends.html[Go to the Astra Trident docs for configuration steps^].
