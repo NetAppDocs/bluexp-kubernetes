@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /requirements/kubernetes-reqs-aks.html
 keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, azure, aks, kubernetes support
-summary: You can add and manage managed Azure Kubernetes clusters (AKS) and self-managed Kubernetes clusters in Azure using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+summary: You can add and manage managed Azure Kubernetes clusters (AKS) and self-managed Kubernetes clusters in Azure using BlueXP. Before you can add the clusters to BlueXP, ensure the following requirements are met.
 ---
 
 = Requirements for Kubernetes clusters in Azure
@@ -13,36 +13,36 @@ summary: You can add and manage managed Azure Kubernetes clusters (AKS) and self
 :imagesdir: ../media/
 
 [.lead]
-You can add and manage managed Azure Kubernetes clusters (AKS) and self-managed Kubernetes clusters in Azure using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+You can add and manage managed Azure Kubernetes clusters (AKS) and self-managed Kubernetes clusters in Azure using BlueXP. Before you can add the clusters to BlueXP, ensure the following requirements are met.
 
 NOTE: This topic uses _Kubernetes cluster_ where configuration is the same for AKS and self-managed Kubernetes clusters. The cluster type is specified where configuration differs.
 
 == Requirements
 
 Astra Trident::
-One of the four most recent versions of Astra Trident is required. You can install or upgrade Astra Trident directly from Cloud Manager. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
+One of the four most recent versions of Astra Trident is required. You can install or upgrade Astra Trident directly from BlueXP. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
 
 Cloud Volumes ONTAP::
 Cloud Volumes ONTAP must be set up as backend storage for the cluster. https://docs.netapp.com/us-en/trident/trident-use/backends.html[Go to the Astra Trident docs for configuration steps^].
 
-Cloud Manager Connector::
+BlueXP Connector::
 A Connector must be running in Azure with the required permissions. <<Prepare a Connector,Learn more below>>.
 
 Network connectivity::
 Network connectivity is required between the Kubernetes cluster and the Connector and between the Kubernetes cluster and Cloud Volumes ONTAP. <<Review networking requirements,Learn more below>>.
 
 RBAC authorization::
-Cloud Manager supports RBAC-enabled clusters with and without Active Directory. The Cloud Manager Connector role must be authorized on each Azure cluster. <<Set up RBAC authorization,Learn more below>>.
+BlueXP supports RBAC-enabled clusters with and without Active Directory. The BlueXP Connector role must be authorized on each Azure cluster. <<Set up RBAC authorization,Learn more below>>.
 
 == Prepare a Connector
 
-A Cloud Manager Connector in Azure is required to discover and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions.
+A BlueXP Connector in Azure is required to discover and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions.
 
 === Create a new Connector
 
 Follow the steps in one of the links below.
 
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#overview[Create a Connector from Cloud Manager^] (recommended)
+* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#overview[Create a Connector from BlueXP^] (recommended)
 * link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html[Create a Connector from the Azure Marketplace^]
 * link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host^]
 
@@ -109,12 +109,12 @@ Backup and restore::
 Backup and restore requires only basic authorization.
 
 Add storage classes::
-Expanded authorization is required to add storage classes using Cloud Manager and monitor the cluster for changes to the backend.
+Expanded authorization is required to add storage classes using BlueXP and monitor the cluster for changes to the backend.
 
 Install Astra trident::
-You need to provide full authorization for Cloud Manager to install Astra Trident.
+You need to provide full authorization for BlueXP to install Astra Trident.
 +
-NOTE: When installing Astra Trident, Cloud Manager installs the Astra Trident backend and Kubernetes secret that contains the credentials Astra Trident needs to communicate with the storage cluster.
+NOTE: When installing Astra Trident, BlueXP installs the Astra Trident backend and Kubernetes secret that contains the credentials Astra Trident needs to communicate with the storage cluster.
 
 .Before you begin
 Your RBAC ``subjects: name:`` configuration varies slightly based on your Kubernetes cluster type.
@@ -215,7 +215,7 @@ roleRef:
 .Storage classes
 --
 
-Add expanded authorization to add storage classes using Cloud Manager.
+Add expanded authorization to add storage classes using BlueXP.
 
 [source,yaml]
 apiVersion: rbac.authorization.k8s.io/v1
@@ -282,7 +282,7 @@ roleRef:
 .Install Trident
 --
 
-Use the command line to provide full authorization and enable Cloud Manager to install Astra Trident.
+Use the command line to provide full authorization and enable BlueXP to install Astra Trident.
 
 [source,cli]
 

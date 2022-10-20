@@ -5,7 +5,7 @@ keywords: kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes 
 summary: Astra Trident is a fully-supported open source project maintained by NetApp. Astra Trident integrates natively with Kubernetes and its Persistent Volume framework to seamlessly provision and manage volumes from systems running any combination of NetApp storage platforms.
 ---
 
-= Kubernetes data management in Cloud Manager
+= Kubernetes data management in BlueXP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -16,7 +16,7 @@ summary: Astra Trident is a fully-supported open source project maintained by Ne
 Astra Trident is a fully-supported open source project maintained by NetApp. Astra Trident integrates natively with Kubernetes and its Persistent Volume framework to seamlessly provision and manage volumes from systems running any combination of NetApp storage platforms. link:https://docs.netapp.com/us-en/trident/index.html[Learn more about Trident^].
 
 == Features
-Using a compatible version of Astra Trident deployed using the Trident operator, you can directly manage your Kubernetes clusters using Cloud Manager. 
+Using a compatible version of Astra Trident deployed using the Trident operator, you can directly manage your Kubernetes clusters using BlueXP. 
 
 * Install or upgrade Astra Trident. 
 * Add and manage clusters as part of your hybrid cloud infrastructure.
@@ -25,7 +25,7 @@ Using a compatible version of Astra Trident deployed using the Trident operator,
 
 == Supported Kubernetes deployments
 
-Cloud Manager supports managed-Kubernetes clusters running in:
+BlueXP supports managed-Kubernetes clusters running in:
 
 * link:./requirements/kubernetes-reqs-aws.html[Amazon Elastic Kubernetes Service (Amazon EKS)]
 * link:./requirements/kubernetes-reqs-aks.html[Microsoft Azure Kubernetes Service (AKS)]
@@ -35,7 +35,7 @@ Cloud Manager supports managed-Kubernetes clusters running in:
 
 One of the four most recent versions of Astra Trident link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[deployed using the Trident operator^] is required. 
 
-You can install or upgrade to the latest version of Astra Trident directly from Cloud Manager. 
+You can install or upgrade to the latest version of Astra Trident directly from BlueXP. 
 
 link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[Review Astra Trident prerequisites^]
 
@@ -45,4 +45,4 @@ NetApp Astra Trident must be installed on each Kubernetes cluster and Cloud Volu
 
 == Cost
 
-There are no charges to _discover_ your Kubernetes clusters in Cloud Manager, but you will be charged when you back up persistent volumes using Cloud Backup Service.
+There are no charges to _discover_ your Kubernetes clusters in BlueXP, but you will be charged when you back up persistent volumes using Cloud Backup Service.

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /task/task-k8s-manage-remove-cluster.html
 keywords: kubernetes, k8s, remove cluster
-summary: After you add a managed-Kubernetes cluster to the Canvas, you can use Cloud Manager to remove clusters from the workspace.
+summary: After you add a managed-Kubernetes cluster to the Canvas, you can use BlueXP to remove clusters from the workspace.
 ---
 
 = Remove Kubernetes clusters from the workspace
@@ -13,7 +13,7 @@ summary: After you add a managed-Kubernetes cluster to the Canvas, you can use C
 :imagesdir: ../media/
 
 [.lead]
-After you add a managed Kubernetes cluster to the Canvas, you can use Cloud Manager to remove clusters from the workspace.
+After you add a managed Kubernetes cluster to the Canvas, you can use BlueXP to remove clusters from the workspace.
 
 .Steps
 

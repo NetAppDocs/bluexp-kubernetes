@@ -2,10 +2,10 @@
 sidebar: sidebar
 permalink: /task/task-kubernetes-discover-openshift.html
 keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, openshift, kubernetes support, import kubernetes cluster, import 
-summary: Import a self-managed OpenShift cluster to Cloud Manager so that you can start backing up persistent volumes to your Cloud provider.
+summary: Import a self-managed OpenShift cluster to BlueXP so that you can start backing up persistent volumes to your Cloud provider.
 ---
 
-= Add an OpenShift cluster to Cloud Manager
+= Add an OpenShift cluster to BlueXP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -13,7 +13,7 @@ summary: Import a self-managed OpenShift cluster to Cloud Manager so that you ca
 :imagesdir: ../media/
 
 [.lead]
-Import a self-managed OpenShift cluster to Cloud Manager so you can start backing up persistent volumes to your Cloud provider.
+Import a self-managed OpenShift cluster to BlueXP so you can start backing up persistent volumes to your Cloud provider.
 
 == Import a Cluster
 You can import a self-managed Kubernetes cluster using a Kubernetes configuration file.
@@ -42,4 +42,4 @@ image:screenshot-oc-certs.png[A screenshot of the cluster certificate upload scr
 
 .Result
 
-Cloud Manager adds the Kubernetes cluster to the Canvas.
+BlueXP adds the Kubernetes cluster to the Canvas.
