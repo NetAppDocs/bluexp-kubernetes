@@ -31,9 +31,11 @@ NOTE: If no storage class is defined, the cluster will show there is an action r
 +
 image:screenshot-k8s-storage-fstype.png[A screenshot showing the fstype option for block storage when configuring a K8s storage class.]
 
-.. For *Block* or *Filesystem* storage, you can select to enable storage economy.
+.. For *Block* or *Filesystem* storage, you can select to enable storage class economy.
 +
 image:screenshot-k8s-storage-economy.png[A screenshot showing the storage economy option when configuring a block or files K8s storage class.]
++
+NOTE: Backup and restore are not supported when using storage class economy.
 
 . Select options for volume expansion, volume binding, and default storage class. Click *Next*.
 
