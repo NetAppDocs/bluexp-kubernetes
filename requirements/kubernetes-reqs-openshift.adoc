@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /requirements/kubernetes-reqs-openshift.html
 keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, openshift, oc, kubernetes support
-summary: You can add and manage self-managed OpenShift Kubernetes clusters using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+summary: You can add and manage self-managed OpenShift Kubernetes clusters using BlueXP. Before you can add the clusters to BlueXP, ensure the following requirements are met.
 ---
 
 = Requirements for Kubernetes clusters in OpenShift
@@ -13,18 +13,18 @@ summary: You can add and manage self-managed OpenShift Kubernetes clusters using
 :imagesdir: ../media/
 
 [.lead]
-You can add and manage self-managed OpenShift Kubernetes clusters using Cloud Manager. Before you can add the clusters to Cloud Manager, ensure the following requirements are met.
+You can add and manage self-managed OpenShift Kubernetes clusters using BlueXP. Before you can add the clusters to BlueXP, ensure the following requirements are met.
 
 == Requirements
 
 Astra Trident::
-One of the four most recent versions of Astra Trident is required. You can install or upgrade Astra Trident directly from Cloud Manager. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
+One of the four most recent versions of Astra Trident is required. You can install or upgrade Astra Trident directly from BlueXP. You should link:https://docs.netapp.com/us-en/trident/trident-get-started/requirements.html[review the prerequisites^] prior to installing Astra Trident.
 
 Cloud Volumes ONTAP::
 Cloud Volumes ONTAP must be set up as backend storage for the cluster. https://docs.netapp.com/us-en/trident/trident-use/backends.html[Go to the Astra Trident docs for configuration steps^].
 
-Cloud Manager Connector::
-A Cloud Manager Connector is required to import and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions for your Cloud provider:
+BlueXP Connector::
+A BlueXP Connector is required to import and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions for your Cloud provider:
 
 * link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html#prepare-a-connector[AWS Connector]
 
@@ -40,14 +40,14 @@ To import OpenShift clusters, you need a kubeconfig file with the RBAC authoriza
 
 * Backup and restore: Backup and restore requires only basic authorization.
 
-* Add storage classes: Expanded authorization is required to add storage classes using Cloud Manager and monitor the cluster for changes to the backend.
+* Add storage classes: Expanded authorization is required to add storage classes using BlueXP and monitor the cluster for changes to the backend.
 
-* Install Astra Trident: You need to provide full authorization for Cloud Manager to install Astra Trident.
+* Install Astra Trident: You need to provide full authorization for BlueXP to install Astra Trident.
 +
-NOTE: When installing Astra Trident, Cloud Manager installs the Astra Trident backend and Kubernetes secret that contains the credentials Astra Trident needs to communicate with the storage cluster.
+NOTE: When installing Astra Trident, BlueXP installs the Astra Trident backend and Kubernetes secret that contains the credentials Astra Trident needs to communicate with the storage cluster.
 
 == Create a kubeconfig file
-Using the OpenShift CLI, create a kubeconfig file to import to Cloud Manager.
+Using the OpenShift CLI, create a kubeconfig file to import to BlueXP.
 
 .Steps
 . Log in to the OpenShift CLI using `oc login` on a public URL with an administrative user. 
@@ -168,7 +168,7 @@ subjects:
 .Storage classes
 --
 
-Add expanded authorization to add storage classes using Cloud Manager.
+Add expanded authorization to add storage classes using BlueXP.
 
 [source,yaml]
 apiVersion: rbac.authorization.k8s.io/v1
@@ -235,7 +235,7 @@ subjects:
 .Install Trident
 --
 
-Grant full admin authorization and enable Cloud Manager to install Astra Trident.
+Grant full admin authorization and enable BlueXP to install Astra Trident.
 
 [source,cli]
 
@@ -358,4 +358,4 @@ source create-kubeconfig.sh
 ----
 
 .Result
-You will use the resulting `kubeconfig-sa` file to add an OpenShift cluster to Cloud Manager. 
+You will use the resulting `kubeconfig-sa` file to add an OpenShift cluster to BlueXP. 

@@ -2,7 +2,7 @@
 layout: astra
 sidebar: sidebar
 permalink: index.html
-summary: Add your managed-Kubernetes clusters to Cloud Manager for advanced data management.
+summary: Add your managed-Kubernetes clusters to BlueXP for advanced data management.
 ---
 
 = Kubernetes clusters documentation

@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /task/task-k8s-manage-persistent-volumes.html
 keywords: kubernetes, k8s, view persistent volume
-summary: After you add a managed-Kubernetes cluster to the Canvas, you can use Cloud Manager to view connected persistent volumes.
+summary: After you add a managed-Kubernetes cluster to the Canvas, you can use BlueXP to view connected persistent volumes.
 ---
 
 = View persistent volumes
@@ -13,9 +13,9 @@ summary: After you add a managed-Kubernetes cluster to the Canvas, you can use C
 :imagesdir: ../media/
 
 [.lead]
-After you add a managed Kubernetes cluster to the Canvas, you can use Cloud Manager to view persistent volumes. 
+After you add a managed Kubernetes cluster to the Canvas, you can use BlueXP to view persistent volumes. 
 
-NOTE: Cloud Manager monitors the Kubernetes cluster for changes to the backend and updates the persistent volume table when new volumes are added. If automatic backup was configured on the cluster, backup is automatically enabled on the new persistent volumes.
+NOTE: BlueXP monitors the Kubernetes cluster for changes to the backend and updates the persistent volume table when new volumes are added. If automatic backup was configured on the cluster, backup is automatically enabled on the new persistent volumes.
 
 .Steps
 
