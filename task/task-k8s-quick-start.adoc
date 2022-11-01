@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: /task/task-k8s-quick-start.html
 keywords: kubernetes, persistent volumes, containers, persistent storage, kubeconfig, trident, kubernetes cluster, storage classes, classes, cvo-single, cvo-ha, thick provisioning, trident_trident, connect, disconnect, provision
-summary: Add Kubernetes clusters to Cloud Manager for advanced data management in a few quick steps.
+summary: Add Kubernetes clusters to BlueXP for advanced data management in a few quick steps.
 ---
 
 = Get started with Kubernetes clusters
@@ -13,7 +13,7 @@ summary: Add Kubernetes clusters to Cloud Manager for advanced data management i
 :imagesdir: ../media/
 
 [.lead]
-Add Kubernetes clusters to Cloud Manager for advanced data management in a few quick steps.
+Add Kubernetes clusters to BlueXP for advanced data management in a few quick steps.
 
 == Quick start
 
@@ -39,10 +39,10 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kuberne
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html[Requirements for Kubernetes clusters in Google Cloud]
 // endif::gcp[]
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add your Kubernetes clusters to Cloud Manager
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-2.png[Two] Add your Kubernetes clusters to BlueXP
 
 [role="quick-margin-para"]
-You can add Kubernetes clusters and connect them to a Working Environment using Cloud Manager.
+You can add Kubernetes clusters and connect them to a Working Environment using BlueXP.
 
 // ifdef::aws[]
 [role="quick-margin-para"]
@@ -62,15 +62,15 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-3.png[Four] Start provisioning Persistent Volumes
 
 [role="quick-margin-para"]
-Request and manage Persistent Volumes using native Kubernetes interfaces and constructs. Cloud Manager creates NFS and iSCSI storage classes that you can use when provisioning Persistent Volumes.
+Request and manage Persistent Volumes using native Kubernetes interfaces and constructs. BlueXP creates NFS and iSCSI storage classes that you can use when provisioning Persistent Volumes.
 
 [role="quick-margin-para"]
 link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-postdeployment.html#step-3-provision-your-first-volume[Learn more about provisioning your first volume with Astra Trident^].
 
-.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Manage your clusters using Cloud Manager
+.image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-4.png[Four] Manage your clusters using BlueXP
 
 [role="quick-margin-para"]
-After adding Kubernetes clusters to Cloud Manager, you can manage the clusters from the Cloud Manager resource page.
+After adding Kubernetes clusters to BlueXP, you can manage the clusters from the BlueXP resource page.
 
 [role="quick-margin-para"]
 link:task-k8s-manage-trident.html[Learn how to manage Kubernetes clusters.]
