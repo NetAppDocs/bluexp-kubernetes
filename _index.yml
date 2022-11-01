@@ -1,5 +1,5 @@
 indexpage:
-  lead: Add your managed-Kubernetes clusters to Cloud Manager for advanced data management.
+  lead: Add your managed-Kubernetes clusters to BlueXP for advanced data management.
   tiles: 
     - title: Get started
       links:
@@ -47,7 +47,7 @@ indexpage:
          url: /task/task-k8s-manage-remove-cluster.html
        - title: Enable data services
          url: /task/task-kubernetes-enable-services.html
-    - title: Get help with Cloud Manager
+    - title: Get help with BlueXP
       links:
         - title: Register for support
           url: /support/task-support-registration.html

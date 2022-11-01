@@ -2,7 +2,7 @@
 sidebar: sidebar
 permalink: concept-manage-k8s.html
 keywords: overview, manage, k8s, kubernetes
-summary: You can use Cloud Manager to install Astra Trident, configure storage classes, remove clusters, and enable data services.
+summary: You can use BlueXP to install Astra Trident, configure storage classes, remove clusters, and enable data services.
 ---
 
 = Manage Kubernetes clusters
@@ -12,13 +12,13 @@ summary: You can use Cloud Manager to install Astra Trident, configure storage c
 :linkattrs:
 :imagesdir: ./media/
 
-You can use Cloud Manager to install or upgrade Astra Trident, configure storage classes, remove clusters, and enable data services.
+You can use BlueXP to install or upgrade Astra Trident, configure storage classes, remove clusters, and enable data services.
 
-NOTE: Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use Cloud Manager to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./tasks/task-k8s-manage-trident.html[using Cloud Manager]. 
+NOTE: Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use BlueXP to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./tasks/task-k8s-manage-trident.html[using BlueXP]. 
 
 == Features
 
-After adding Kubernetes clusters to Cloud Manager, you can manage the clusters from the resource page. To open the resource page, double-click the Kubernetes working environment on the Canvas.
+After adding Kubernetes clusters to BlueXP, you can manage the clusters from the resource page. To open the resource page, double-click the Kubernetes working environment on the Canvas.
 
 image:screenshot-k8s-resource-page.png[A screenshot of the Kubernetes resource page showing details for the cluster.^]
 
