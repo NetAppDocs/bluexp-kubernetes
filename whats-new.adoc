@@ -16,7 +16,7 @@ summary: Learn what's new in Kubernetes in BlueXP.
 Learn what's new in Kubernetes in BlueXP (formerly Cloud Manager).
 
 //tag::whats-new[]
-== 30 October 2022
+== 06 November 2022
 
 When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now enable storage class economy for block or filesystem storage.
 
