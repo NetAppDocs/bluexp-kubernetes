@@ -17,7 +17,7 @@ Add Kubernetes clusters to BlueXP for advanced data management in a few steps.
 
 == Quick start
 
-Using link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html[BlueXP] you can start managing Kubernetes clusters in just a few steps.
+Using link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html[BlueXP^] you can start managing Kubernetes clusters in just a few steps.
 
 .image:https://raw.githubusercontent.com/NetAppDocs/common/main/media/number-1.png[One] Review prerequisites
 
