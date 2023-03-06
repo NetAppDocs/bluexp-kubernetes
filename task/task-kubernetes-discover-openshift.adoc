@@ -5,7 +5,7 @@ keywords: kubernetes, k8s, discover kubernetes cluster, discover k8s, openshift,
 summary: Import a self-managed OpenShift cluster to BlueXP so that you can start backing up persistent volumes to your Cloud provider.
 ---
 
-= Add an OpenShift cluster to BlueXP
+= Import an OpenShift cluster to BlueXP
 :hardbreaks:
 :nofooter:
 :icons: font
@@ -19,7 +19,7 @@ Import a self-managed OpenShift cluster to BlueXP so you can start backing up pe
 You can import a self-managed Kubernetes cluster using a Kubernetes configuration file.
 
 .Before you begin
-Before adding an OpenShift cluster, you need:
+Before importing an OpenShift cluster, you need:
 
 * The `kubeconfig-sa`file you created in link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-openshift.html#create-a-kubeconfig-file[create a kubeconfig file].
 * The public Certificate Authority (for example, ca.crt), Client Key (for example, tls.key), and Client Certification (for example, tls.crt) files for the cluster.
@@ -28,7 +28,7 @@ Before adding an OpenShift cluster, you need:
 
 . On the *Canvas*, select *Add Working Environment*.
 
-. Select your Cloud provider and select *Kubernetes Cluster* then  *Next*.
+. Select your Cloud provider and select *Kubernetes Cluster* > *Discover*.
 
 . Select *Import Cluster* then *Next*.
 

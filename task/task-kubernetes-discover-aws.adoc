@@ -22,13 +22,13 @@ You can discover a fully-managed or self-managed Kubernetes cluster. Managed clu
 
 . On the *Canvas*, click *Add Working Environment*.
 
-. Select *Amazon Web Services* > *Kubernetes Cluster* and click *Next*.
+. Select *Amazon Web Services* > *Kubernetes Cluster* > *Discover*.
 +
 image:screenshot-discover-kubernetes-aws-1.png[A screenshot of the Discover a Kubernetes Cluster page showing a selected AWS region and a Kubernetes cluster.]
 
 . Select *Discover Cluster* and click *Next*.
 
-. Choose an AWS region, select a Kubernetes cluster, and then click *Next*.
+. Choose an AWS region, select a Kubernetes cluster, and click *Next*.
 +
 image:screenshot-discover-kubernetes-aws-2.png[A screenshot of the Discover a Kubernetes Cluster page showing a selected AWS region and a Kubernetes cluster.]
 
@@ -45,7 +45,7 @@ You can import a self-managed Kubernetes cluster using a Kubernetes configuratio
 
 . On the *Canvas*, click *Add Working Environment*.
 
-. Select *Amazon Web Services* > *Kubernetes Cluster* and click *Next*.
+. Select *Amazon Web Services* > *Kubernetes Cluster* > *Discover*.
 
 . Select *Import Cluster* and click *Next*.
 

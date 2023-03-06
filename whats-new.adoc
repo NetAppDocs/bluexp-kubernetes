@@ -16,6 +16,11 @@ summary: Learn what's new in Kubernetes in BlueXP.
 Learn what's new in Kubernetes in BlueXP (formerly Cloud Manager).
 
 //tag::whats-new[]
+== 05 March 2023
+
+* Kubernetes in BlueXP now supports Astra Trident 23.01.
+* User interface improvements have been made and screenshots have been updated in the documentation. 
+
 == 06 November 2022
 
 When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now enable storage class economy for block or filesystem storage.
@@ -57,7 +62,7 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage
 
 == 6 June 2022
 
-Cloud Manager now suports Amazon FSx for ONTAP as backend storage.  
+Cloud Manager now supports Amazon FSx for ONTAP as backend storage.  
 
 == 4 May 2022
 
@@ -66,6 +71,7 @@ You can now drag your Kubernetes cluster and drop it onto the Cloud Volumes ONTA
 
 link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[Add storage class]
 
+//end::whats-new[]
 == 4 April 2022
 
 === Manage Kubernetes clusters using the Cloud Manager resource page
@@ -80,7 +86,6 @@ You can now take the following actions from the cluster resource page.
 * link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-remove-cluster.html[Remove clusters]
 * link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-enable-services.html[Enable data services]
 
-//end::whats-new[]
 == 27 February 2022
 
 === Support for Kubernetes clusters in Google Cloud
