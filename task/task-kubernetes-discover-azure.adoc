@@ -22,7 +22,7 @@ You can discover a fully-managed or self-managed Kubernetes cluster. Managed clu
 
 . On the *Canvas*, click *Add Working Environment*.
 
-. Select *Microsoft Azure* > *Kubernetes Cluster* and click *Next*.
+. Select *Microsoft Azure* > *Kubernetes Cluster* > *Discover*.
 +
 image:screenshot-discover-kubernetes-aks.png[A screenshot of the Add Working Environment page showing Microsoft Azure and Kubernetes Cluster selected.]
 
@@ -48,7 +48,7 @@ You will need Certificate Authority, Client Key, and Client Certificate certific
 
 . On the *Canvas*, click *Add Working Environment*.
 
-. Select *Microsoft Azure* > *Kubernetes Cluster* and click *Next*.
+. Select *Microsoft Azure* > *Kubernetes Cluster* > *Discover*.
 
 . Select *Import Cluster* and click *Next*.
 
