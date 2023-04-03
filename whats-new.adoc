@@ -16,6 +16,10 @@ summary: Learn what's new in Kubernetes in BlueXP.
 Learn what's new in Kubernetes in BlueXP (formerly Cloud Manager).
 
 //tag::whats-new[]
+== 02 April 2023
+* You can now link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-trident.html[uninstall Astra Trident] that was installed using the Trident operator or BlueXP. 
+* User interface improvements have been made and screenshots have been updated in the documentation. 
+
 == 05 March 2023
 
 * Kubernetes in BlueXP now supports Astra Trident 23.01.
@@ -25,6 +29,7 @@ Learn what's new in Kubernetes in BlueXP (formerly Cloud Manager).
 
 When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now enable storage class economy for block or filesystem storage.
 
+//end::whats-new[]
 == 18 September 2022
 You can now import self-managed OpenShift clusters into Cloud Manager. 
 
@@ -50,7 +55,6 @@ link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kuberne
 
 * When link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-k8s-manage-storage-classes.html#add-storage-classes[defining storage classes], you can now specify a file system type (fstype) for block storage.
 
-//end::whats-new[]
 == 3 July 2022
 * If Astra Trident was deployed using the Trident operator, you can now upgrade to the latest version of Astra Trident using Cloud Manager. 
 +
