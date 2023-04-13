@@ -35,26 +35,20 @@ sidebar:
     - title: Requirements
       entries:
         - title: Kubernetes clusters on AWS
-          flavor: aws
           url: /requirements/kubernetes-reqs-aws.html
         - title: Kubernetes clusters on Azure
-          flavor: azure
           url: /requirements/kubernetes-reqs-aks.html
         - title: Kubernetes clusters on Google Cloud
-          flavor: gcp
           url: /requirements/kubernetes-reqs-gke.html
         - title: Kubernetes clusters on OpenShift
           url: /requirements/kubernetes-reqs-openshift.html
     - title: Add Kubernetes clusters
       entries:
         - title: Add clusters on AWS
-          flavor: aws
           url: /task/task-kubernetes-discover-aws.html
         - title: Add clusters on Azure
-          flavor: azure
           url: /task/task-kubernetes-discover-azure.html
         - title: Add clusters on Google Cloud
-          flavor: gcp
           url: /task/task-kubernetes-discover-gke.html
         - title: Import OpenShift clusters
           url: /task/task-kubernetes-discover-openshift.html
