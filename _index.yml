@@ -11,33 +11,33 @@ indexpage:
           url: /task/task-k8s-quick-start.html
     - title: Requirements
       links:
-        - title: Kubernetes clusters on AWS          
+        - title: Kubernetes clusters on AWS
+          # flavor: aws
           url: /requirements/kubernetes-reqs-aws.html
-          flavor: aws
-        - title: Kubernetes clusters on Azure          
+        - title: Kubernetes clusters on Azure
+          # flavor: azure
           url: /requirements/kubernetes-reqs-aks.html
-          flavor: azure
-        - title: Kubernetes clusters on Google Cloud          
+        - title: Kubernetes clusters on Google Cloud
+          # flavor: gcp
           url: /requirements/kubernetes-reqs-gke.html
-          flavor: gcp
         - title: Kubernetes clusters on OpenShift
           url: /requirements/kubernetes-reqs-openshift.html
     - title: Add Kubernetes clusters
       links:
-        - title: Add clusters on AWS          
+        - title: Add clusters on AWS
+          # flavor: aws
           url: /task/task-kubernetes-discover-aws.html
-          flavor: aws
-        - title: Add clusters on Azure          
+        - title: Add clusters on Azure
+          # flavor: azure
           url: /task/task-kubernetes-discover-azure.html
-          flavor: azure
-        - title: Add clusters on Google Cloud          
+        - title: Add clusters on Google Cloud
+          # flavor: gcp
           url: /task/task-kubernetes-discover-gke.html
-          flavor: gcp
         - title: Import OpenShift clusters 
           url: /task/task-kubernetes-discover-openshift.html
     - title: Manage Kubernetes clusters
       links:
-       - title: Install Astra Trident
+       - title: Manage Astra Trident
          url: /task/task-k8s-manage-trident.html
        - title: Manage storage classes
          url: /task/task-k8s-manage-storage-classes.html
