@@ -37,7 +37,7 @@ BlueXP supports managed-Kubernetes clusters running in:
 
 One of the four most recent versions of Astra Trident link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[deployed using the Trident operator^] is required. 
 
-NOTE: Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use BlueXP to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./tasks/task-k8s-manage-trident.html[using BlueXP]. 
+NOTE: Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use BlueXP to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./task/task-k8s-manage-trident.html[using BlueXP]. 
 
 You can install or upgrade to the latest version of Astra Trident directly from BlueXP. 
 
