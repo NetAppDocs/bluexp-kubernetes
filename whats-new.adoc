@@ -35,7 +35,7 @@ You can now import self-managed OpenShift clusters into Cloud Manager.
 
 * link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-openshift.html[Requirements for Kubernetes clusters in OpenShift]
 
-* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-add-openshift.html[Add an OpenShift cluster to Cloud Manager]
+* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/task/task-kubernetes-discover-openshift.html[Import an OpenShift cluster to Cloud Manager]
 
 == 31 July 2022
 
