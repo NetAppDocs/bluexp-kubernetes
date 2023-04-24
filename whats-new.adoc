@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: whats-new.html
-keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager
+keywords: what's new, features, new, release notes, bugs, limitations, known issues, enhancements, fixes, cloud manager, bluexp
 summary: Learn what's new in Kubernetes in BlueXP.
 ---
 
@@ -13,7 +13,7 @@ summary: Learn what's new in Kubernetes in BlueXP.
 :imagesdir: ./media/
 
 [.lead]
-Learn what's new in Kubernetes in BlueXP (formerly Cloud Manager).
+Learn what's new in Kubernetes in BlueXP (Cloud Manager).
 
 //tag::whats-new[]
 == 02 April 2023
