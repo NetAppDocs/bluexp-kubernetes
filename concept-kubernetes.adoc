@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-kubernetes.html
-keywords: kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, azure, aks, back up persistent volumes, persistent volumes, kubernetes support, cloud manager
+keywords: kubernetes, k8s, back up kubernetes, back up k8s, discover kubernetes cluster, discover k8s, amazon eks, eks, azure, aks, back up persistent volumes, persistent volumes, kubernetes support, cloud manager, bluexp
 summary: Astra Trident is a fully-supported open source project maintained by NetApp. Astra Trident integrates natively with Kubernetes and its Persistent Volume framework to seamlessly provision and manage volumes from systems running any combination of NetApp storage platforms.
 ---
 
@@ -16,14 +16,14 @@ summary: Astra Trident is a fully-supported open source project maintained by Ne
 Astra Trident is a fully-supported open source project maintained by NetApp. Astra Trident integrates natively with Kubernetes and its Persistent Volume framework to seamlessly provision and manage volumes from systems running any combination of NetApp storage platforms. link:https://docs.netapp.com/us-en/trident/index.html[Learn more about Trident^].
 
 == Features
-Using a link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html[BlueXP^] (formerly Cloud Manager) and a compatible version of Astra Trident deployed using the Trident operator, you can:  
+Using a link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html[BlueXP^] (Cloud Manager) and a compatible version of Astra Trident deployed using the Trident operator, you can:  
 
 * Add and manage Kubernetes clusters
 * link:./task/task-k8s-manage-trident.html[Install, upgrade, or uninstall Astra Trident]
 * link:./task/task-k8s-manage-storage-classes.html[Add and remove storage classes]
 * link:./task/task-k8s-manage-persistent-volumes.html[View persistent volumes]
 * link:./task/task-k8s-manage-remove-cluster.html[Remove Kubernetes clusters] from the workspace
-* link:./task/task-kubernetes-enable-services.html[Activate or view Cloud Backup]
+* link:./task/task-kubernetes-enable-services.html[Activate or view BlueXP backup and recovery]
 
 == Supported Kubernetes deployments
 
