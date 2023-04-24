@@ -17,7 +17,6 @@ Astra Trident is a fully-supported open source project maintained by NetApp. Ast
 
 == Features
 Using a link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/index.html[BlueXP^] (Cloud Manager) and a compatible version of Astra Trident deployed using the Trident operator, you can:  
-
 * Add and manage Kubernetes clusters
 * link:./task/task-k8s-manage-trident.html[Install, upgrade, or uninstall Astra Trident]
 * link:./task/task-k8s-manage-storage-classes.html[Add and remove storage classes]
