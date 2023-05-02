@@ -1,7 +1,7 @@
 ---
 sidebar: sidebar
 permalink: concept-manage-k8s.html
-keywords: overview, manage, k8s, kubernetes
+keywords: overview, manage, k8s, kubernetes, tridentctl, trident operator, operator
 summary: You can use BlueXP to install Astra Trident, configure storage classes, remove clusters, and enable data services.
 ---
 
@@ -12,10 +12,8 @@ summary: You can use BlueXP to install Astra Trident, configure storage classes,
 :linkattrs:
 :imagesdir: ./media/
 
-[].lead]
+[.lead]
 You can use BlueXP to install or upgrade Astra Trident, configure storage classes, remove clusters, and enable data services.
-
-NOTE: Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use BlueXP to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./task/task-k8s-manage-trident.html[using BlueXP]. 
 
 == Features
 
@@ -31,3 +29,7 @@ From the resource page you can:
 * View persistent volumes. See link:./task/task-k8s-manage-persistent-volumes.html[View persistent volumes].
 * Remove Kubernetes clusters from the workspace. See link:./task/task-k8s-manage-remove-cluster.html[Remove clusters].
 * Activate or view BlueXP backup and recovery. See link:./task/task-kubernetes-enable-services.html[Use NetApp cloud data services].
+
+== Known limitation
+
+Astra Trident deployed using `tridentctl` is not supported. If you deployed Astra Trident using `tridentctl`, you cannot use BlueXP to manage your Kubernetes clusters. You must link:https://docs.netapp.com/us-en/trident/trident-managing-k8s/uninstall-trident.html#uninstall-by-using-tridentctl[uninstall using `tridentctl`^] and reinstall link:https://docs.netapp.com/us-en/trident/trident-get-started/kubernetes-deploy-operator.html[using the Trident operator^] or link:./task/task-k8s-manage-trident.html[using BlueXP]. 
