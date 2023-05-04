@@ -116,7 +116,7 @@ image:screenshot-gke-unique-id.png[A screenshot of the service account details i
 
 Create a cluster role and role binding.
 
-. Create a YAML file that includes the following text based on your authorization requirements. Replace the ``subjects: kind:`` variable with your username and ``subjects: user:`` with the unique ID for the authorized service account.
+. You can customize authorization based on your requirements.
 +
 [role="tabbed-block"]
 ====
@@ -125,6 +125,8 @@ Create a cluster role and role binding.
 --
 
 Add basic authorization to enable backup and restore for Kubernetes clusters.
+
+Replace the ``subjects: kind:`` variable with your username and ``subjects: user:`` with the unique ID for the authorized service account.
 
 [source,yaml]
 apiVersion: rbac.authorization.k8s.io/v1
@@ -203,6 +205,8 @@ roleRef:
 
 Add expanded authorization to add storage classes using BlueXP.
 
+Replace the ``subjects: kind:`` variable with your username and ``subjects: user:`` with the unique ID for the authorized service account.
+
 [source,yaml]
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -262,6 +266,17 @@ roleRef:
     kind: ClusterRole
     name: cloudmanager-access-clusterrole
     apiGroup: rbac.authorization.k8s.io
+
+--
+
+.Trident installation
+--
+
+Use the command line to provide full authorization and enable BlueXP to install Astra Trident.
+
+[source,cli]
+
+kubectl create clusterrolebinding test --clusterrole cluster-admin --user <Unique ID>
 
 --
 ====
