@@ -42,8 +42,8 @@ A BlueXP Connector in Google is required to discover and manage Kubernetes clust
 
 Follow the steps in one of the links below.
 
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-gcp.html[Create a Connector from BlueXP^] (recommended)
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-gcp.html[Create a Connector from BlueXP^] (recommended)
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host^]
 
 === Add the required permissions to an existing Connector (to discover a managed GKE cluster)
 

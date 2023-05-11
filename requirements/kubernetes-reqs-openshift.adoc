@@ -26,11 +26,11 @@ Cloud Volumes ONTAP must be set up as backend storage for the cluster. https://d
 BlueXP Connector::
 A BlueXP Connector is required to import and manage Kubernetes clusters. You'll need to create a new Connector or use an existing Connector that has the required permissions for your Cloud provider:
 
-* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aws.html#prepare-a-connector[AWS Connector]
+* link:https://docs.netapp.com/us-en/bluexp-kubernetes/requirements/kubernetes-reqs-aws.html#prepare-a-connector[AWS Connector]
 
-* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-aks.html#prepare-a-connector[Azure Connector]
+* link:https://docs.netapp.com/us-en/bluexp-kubernetes/requirements/kubernetes-reqs-aks.html#prepare-a-connector[Azure Connector]
 
-* link:https://docs.netapp.com/us-en/cloud-manager-kubernetes/requirements/kubernetes-reqs-gke.html#prepare-a-connector[Google Cloud Connector]
+* link:https://docs.netapp.com/us-en/bluexp-kubernetes/requirements/kubernetes-reqs-gke.html#prepare-a-connector[Google Cloud Connector]
 
 Network connectivity::
 Network connectivity is required between the Kubernetes cluster and the Connector and between the Kubernetes cluster and Cloud Volumes ONTAP. 
