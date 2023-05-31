@@ -42,9 +42,9 @@ A BlueXP Connector is required in AWS to discover and manage Kubernetes clusters
 
 Follow the steps in one of the links below.
 
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-aws.html[Create a Connector from BlueXP^] (recommended)
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-aws-mktp.html[Create a Connector from the AWS Marketplace^]
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host in AWS^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-aws.html[Create a Connector from BlueXP^] (recommended)
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-launching-aws-mktp.html[Create a Connector from the AWS Marketplace^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host in AWS^]
 
 === Add the required permissions to an existing Connector
 
@@ -73,7 +73,7 @@ image:screenshot-aws-edit-policy.png[A screenshot of the AWS console that shows 
 * iam:GetInstanceProfile
 
 +
-https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-aws.html[View the full JSON format for the policy^]
+https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-aws.html[View the full JSON format for the policy^]
 
 . Click *Review policy* and then click *Save changes*.
 

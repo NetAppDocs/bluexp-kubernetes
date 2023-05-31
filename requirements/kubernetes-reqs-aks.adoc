@@ -42,9 +42,9 @@ A BlueXP Connector in Azure is required to discover and manage Kubernetes cluste
 
 Follow the steps in one of the links below.
 
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-creating-connectors-azure.html#overview[Create a Connector from BlueXP^] (recommended)
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-launching-azure-mktp.html[Create a Connector from the Azure Marketplace^]
-* link:https://docs.netapp.com/us-en/cloud-manager-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-creating-connectors-azure.html#overview[Create a Connector from BlueXP^] (recommended)
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-launching-azure-mktp.html[Create a Connector from the Azure Marketplace^]
+* link:https://docs.netapp.com/us-en/bluexp-setup-admin/task-installing-linux.html[Install the Connector on an existing Linux host^]
 
 === Add the required permissions to an existing Connector (to discover a managed AKS cluster)
 
@@ -78,7 +78,7 @@ If you want to discover a managed AKS cluster, you might need to modify the cust
 "Microsoft.ContainerService/managedClusters/listClusterUserCredential/action"
 "Microsoft.ContainerService/managedClusters/read"
 +
-//https://docs.netapp.com/us-en/cloud-manager-setup-admin/reference-permissions-azure.html[View the full JSON format for the policy^]
+//https://docs.netapp.com/us-en/bluexp-setup-admin/reference-permissions-azure.html[View the full JSON format for the policy^]
 
 .. Click *Review + update* and then click *Update*.
 
