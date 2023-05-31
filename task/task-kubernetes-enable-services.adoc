@@ -17,6 +17,6 @@ After you add a managed Kubernetes cluster to the Canvas, you can use NetApp clo
 
 You can use BlueXP backup and recovery to back up persistent volumes to object storage.
 
-link:https://docs.netapp.com/us-en/cloud-manager-backup-restore/concept-kubernetes-backup-to-cloud.html[Learn how to protect your Kubernetes cluster data using BlueXP backup and recovery^].
+link:https://docs.netapp.com/us-en/bluexp-backup-recovery/concept-kubernetes-backup-to-cloud.html[Learn how to protect your Kubernetes cluster data using BlueXP backup and recovery^].
 
 image:screenshot-k8s-backup.png[A screenshot of the Kubernetes page in BlueXP backup and recovery which shows five backup jobs for a Kubernetes cluster.]
