@@ -140,7 +140,7 @@ Create a cluster role and role binding.
 
 Add basic authorization to enable backup and restore for Kubernetes clusters. 
 
-Replace the ``subjects: kind:`` variable with your username and ``subjects: user:`` with either the Object ID for the system-assigned managed identity or username of any authorized user as described above.
+Replace the `subjects: kind:` variable with your username and `subjects: name:` with either the Object ID for the system-assigned managed identity or username of any authorized user as described above.
 
 [source,yaml]
 apiVersion: rbac.authorization.k8s.io/v1
